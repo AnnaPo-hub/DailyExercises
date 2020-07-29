@@ -17,22 +17,32 @@ public class CoffeeMachine {
      * @param args
      */
     public static void main(String[] args) {
-        System.out.println("Pls write what you want to do: buy, fill or take");
-        Scanner scan = new Scanner(System.in);
-        String optionSelected = scan.nextLine();
         CoffeeMachineData coffeeMachineData = new CoffeeMachineData();
-        switch (optionSelected) {
-            case "buy":
-                System.out.println("Then if you want to buy coffee pls enter  1- espresso, 2 - latte or 3 - cappuccino");
-                int coffeeSelected = scan.nextInt();
-                sellCoffee(coffeeSelected, coffeeMachineData);
+        while (true) {
+            System.out.println("Pls write what you want to do: buy, fill, take, remaining, exit");
+            Scanner scan = new Scanner(System.in);
+            String optionSelected = scan.nextLine();
+            switch (optionSelected) {
+                case "buy":
+                    System.out.println("Pls enter  1- espresso, 2 - latte or 3 - cappuccino");
+                    int coffeeSelected = scan.nextInt();
+                    sellCoffee(coffeeSelected, coffeeMachineData);
+                    break;
+                case "fill":
+                    fillCoffeeMachine(coffeeMachineData);
+                    break;
+                case "take":
+                    takeMoney(coffeeMachineData);
+                    break;
+                case "remaining":
+                    showRemaining(coffeeMachineData);
+                    break;
+                default:
+                    System.out.println("Wrong option or mistype, pls check");;
+            }
+            if (optionSelected.equals("exit")){
                 break;
-            case "fill":
-                fillCoffeeMachine(coffeeMachineData);
-                break;
-            case "take":
-                takeMoney(coffeeMachineData);
-                break;
+            }
         }
     }
 }
