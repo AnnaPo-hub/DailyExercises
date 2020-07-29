@@ -5,8 +5,6 @@ import java.util.Scanner;
 import static coffeeMachine.CoffeeMachineInterface.*;
 
 public class CoffeeMachine {
-
-
     public static void main(String[] args) {
         CoffeeMachineData coffeeMachineData = new CoffeeMachineData();
         while (true) {
@@ -15,8 +13,11 @@ public class CoffeeMachine {
             String optionSelected = scan.nextLine();
             switch (optionSelected) {
                 case "buy":
-                    System.out.println("Pls enter  1- espresso, 2 - latte or 3 - cappuccino");
-                    int coffeeSelected = scan.nextInt();
+                    System.out.println("Pls enter  1- espresso, 2 - latte or 3 - cappuccino. Or,  if you change your mind, you can type back  for the return to the" +
+                            "main menu");
+                    String coffeeSelected = scan.next();
+                    if (coffeeSelected.equals("back"))
+                        break;
                     sellCoffee(coffeeSelected, coffeeMachineData);
                     break;
                 case "fill":
@@ -37,6 +38,3 @@ public class CoffeeMachine {
         }
     }
 }
-
-
-

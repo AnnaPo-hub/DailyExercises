@@ -14,8 +14,4 @@ public class CoffeeAssortment {
         this.amountOfCups = amountOfCups;
         this.price = price;
     }
-
-
 }
-
-
