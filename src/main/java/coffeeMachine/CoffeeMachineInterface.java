@@ -1,5 +1,4 @@
 package coffeeMachine;
-
 import java.util.Scanner;
 
 public class CoffeeMachineInterface {
@@ -50,8 +49,8 @@ public class CoffeeMachineInterface {
                     coffeeMachineData.currAmountOfCups -= 1;
                     break;
             }
-        }else {
-            System.out.println("Sorry, not enough "+ ingredientIfAbsent+ " !");
+        } else {
+            System.out.println("Sorry, not enough " + ingredientIfAbsent + " !");
         }
     }
 
@@ -60,23 +59,16 @@ public class CoffeeMachineInterface {
         coffeeMachineData.currAmountOfMoney = 0;
     }
 
-    public static boolean checkIngredientsEnough(CoffeeMachineData coffeeMachineData, CoffeeAssortment coffeeType) { // copy!
-        return coffeeMachineData.currAmountOfBeans >= coffeeType.amountOfBeans &&
-                coffeeMachineData.currAmountOfCups >= coffeeType.amountOfCups &&
-                coffeeMachineData.currAmountOfMilk >= coffeeType.amountOfMilk &&
-                coffeeMachineData.currAmountOfWater >= coffeeType.amountOfWater;
-    }
-
-    public static String whatIngredientIsNotEnough(CoffeeMachineData coffeeMachineData, CoffeeAssortment coffeeType){
+    public static String whatIngredientIsNotEnough(CoffeeMachineData coffeeMachineData, CoffeeAssortment coffeeType) {
         if (coffeeMachineData.currAmountOfBeans < coffeeType.amountOfBeans)
             return "beans";
-          if(coffeeMachineData.currAmountOfCups <coffeeType.amountOfCups)
-              return "cup";
-            if(coffeeMachineData.currAmountOfMilk <coffeeType.amountOfMilk)
-                return "milk";
-            if(coffeeMachineData.currAmountOfWater< coffeeType.amountOfWater)
-                return "water";
-            return "enough";
+        if (coffeeMachineData.currAmountOfCups < coffeeType.amountOfCups)
+            return "cup";
+        if (coffeeMachineData.currAmountOfMilk < coffeeType.amountOfMilk)
+            return "milk";
+        if (coffeeMachineData.currAmountOfWater < coffeeType.amountOfWater)
+            return "water";
+        return "enough";
     }
 
     public static CoffeeAssortment transformNumberToCoffeeType(int coffeeSelected) {
@@ -87,7 +79,6 @@ public class CoffeeMachineInterface {
             case 2:
                 CoffeeAssortment latte = new CoffeeAssortment(350, 75, 20, 1, 7);
                 return latte;
-
             case 3:
                 CoffeeAssortment cappuccino = new CoffeeAssortment(200, 100, 12, 1, 6);
                 return cappuccino;
@@ -95,4 +86,3 @@ public class CoffeeMachineInterface {
         return null;
     }
 }
-
