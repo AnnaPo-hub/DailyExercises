@@ -26,6 +26,7 @@ public class OrderedStatements {
                System.out.println(false);
                break;
            }
+           count = 0;
            while (count <= sequence.length - 2 && sequence[count] >= sequence[++count]) ;
            if (count < sequence.length - 1) {
                System.out.println(false);
