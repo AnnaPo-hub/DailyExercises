@@ -1,4 +1,5 @@
 Hello!
+[![Build status](https://ci.appveyor.com/api/projects/status/u3sy3ag0y3sqspvi?svg=true)](https://ci.appveyor.com/project/AnnaPo-hub/dailyexercises)
 
 Here you can see my daily Java  exercises. 
 

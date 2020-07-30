@@ -3,6 +3,7 @@ package coffeeMachine;
 import java.util.Scanner;
 
 public class CoffeeMachineInterface {
+
     public static void showRemaining(CoffeeMachineData coffeeMachineData) {// copy!
         System.out.println(coffeeMachineData);
     }

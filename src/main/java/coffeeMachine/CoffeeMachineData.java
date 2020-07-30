@@ -7,6 +7,7 @@ public class CoffeeMachineData {
     int currAmountOfBeans = 120;
     int currAmountOfCups = 9;
 
+
     @Override
     public String toString() {
         return "The coffee machine has: " + "\n" +

@@ -17,6 +17,9 @@ public class OrderedStatements {
            if (input == 0)
                break;
            list.add(input);
+           char[] array = {'a', 'b', 'c', 'd'};
+           char[] array1 = new char[-1];
+
        }
        Integer[] sequence = list.toArray(new Integer[list.size()]);
        int count = 0;
