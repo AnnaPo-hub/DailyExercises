@@ -1,5 +1,6 @@
 public class MultiDimensionalArray {
-    /** A method creates a matrix from n*n elements by filling it . and *. The method forms the star figure from * and output the matrix.
+    /** A method creates a matrix from n*n elements by filling it with  "." and "*".
+     * The method forms the star figure and outputs the matrix.
      *
      * @param input odd number , more than 3, not exceeding 15
      */
