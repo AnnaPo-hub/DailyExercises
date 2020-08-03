@@ -1,3 +1,5 @@
+package multi.dimensional.array;
+
 public class MultiDimensionalArray {
     /** A method creates a matrix from n*n elements by filling it with  "." and "*".
      * The method forms the star figure and outputs the matrix.
@@ -5,7 +7,7 @@ public class MultiDimensionalArray {
      * @param input odd number , more than 3, not exceeding 15
      */
 
-    void makeMatrixWithStar(int input){
+    public void makeMatrixWithStar(int input){
         String[][] star = new String[input][input];
         int starMiddle = input / 2;
         String dot = ".";
