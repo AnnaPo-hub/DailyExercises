@@ -18,7 +18,7 @@ public class Cinema {
                 cinema[i][j] = str;
             }
         }
-        int quantityOfTicketNeeded = scan.nextInt(); //quantity of tickets
+        int quantityOfTicketNeeded = scan.nextInt();
         final int i = checkEmptyPlace(cinema, quantityOfTicketNeeded, m);
         System.out.println(i);
     }
@@ -49,7 +49,6 @@ public class Cinema {
                     int restOfPlaceInRow = m - z;
                     if (restOfPlaceInRow >= quantityOfTicketNeeded) {
                         for (int k = 0; k < quantityOfTicketNeeded; k++) {
-
                             if (cinema[i][z].equals(cinema[i][++z])) {
                                 count++;
                             } else {
