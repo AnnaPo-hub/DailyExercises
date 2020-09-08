@@ -3,6 +3,11 @@ package regEx;
 import java.util.Scanner;
 
 public class SafePassword {
+
+    /**
+     * A methods checks whether the input through scanner parameter is a safe password.
+     * return "YES" if a given input is the safe password and "NO" it is is not safe.
+     */
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         final String input = scan.nextLine();
