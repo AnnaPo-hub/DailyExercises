@@ -29,4 +29,3 @@ public class InTheMiddle {
             System.out.println("NO");
     }
 }
-
